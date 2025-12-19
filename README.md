@@ -26,7 +26,7 @@ Setup Instructions
 
 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/vuln-ai-analyzer.git
+git clone https://github.com/AnasTaibani/vuln-ai-analyzer.git
 cd vuln-ai-analyzer
 ```
 
