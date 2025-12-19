@@ -1,2 +1,104 @@
-user = input()
-query = "SELECT * FROM users WHERE name = '" + user + "'"
+==============================
+SAMPLE INPUTS FOR TESTING
+AI-Based Vulnerability Analyzer
+==============================
+
+
+====================================
+INPUT TYPE 1: VULNERABLE CODE SNIPPET
+====================================
+
+--- Example 1: SQL Injection ---
+query = "SELECT * FROM users WHERE id=" + user
+
+
+--- Example 2: Command Injection ---
+import os
+os.system("ping " + user_input)
+
+
+--- Example 3: XSS ---
+<div>Welcome {{ user_input }}</div>
+
+
+--- Example 4: Multiple Vulnerabilities ---
+query = "SELECT * FROM users WHERE name='" + name + "'"
+os.system("rm -rf " + path)
+
+
+--- Example 5: Safe Code (Edge Case) ---
+cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))
+
+
+
+========================================
+INPUT TYPE 2: SECURITY SCAN OUTPUT (Nmap)
+========================================
+
+--- Example 1: Database Exposed ---
+PORT     STATE SERVICE
+22/tcp   open  ssh
+3306/tcp open  mysql
+
+
+--- Example 2: Multiple Risky Services ---
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+80/tcp   open  http
+3306/tcp open  mysql
+
+
+--- Example 3: Minimal Exposure (Edge Case) ---
+PORT     STATE SERVICE
+22/tcp   open  ssh
+
+
+--- Example 4: Filtered Ports ---
+PORT     STATE SERVICE
+80/tcp   filtered http
+
+
+--- Example 5: Malformed Scan Output ---
+open ssh
+http running
+
+
+
+=============================
+INPUT TYPE 3: DEPENDENCY LIST
+=============================
+
+--- Example 1: Outdated Dependencies ---
+flask==0.12
+django==1.11
+requests==2.19.1
+
+
+--- Example 2: Known Vulnerable Library ---
+log4j==2.14.1
+
+
+--- Example 3: Mixed Safe & Unsafe ---
+flask==2.3.3
+django==1.11
+
+
+--- Example 4: No Versions Specified (Edge Case) ---
+flask
+django
+requests
+
+
+--- Example 5: Large Dependency List ---
+flask==0.12
+django==1.11
+numpy==1.16.0
+pandas==0.24.0
+
+
+
+==============================
+END OF SAMPLE INPUT FILE
+==============================
