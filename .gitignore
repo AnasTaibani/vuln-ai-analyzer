@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+# Environment variables
+.env
+
+# Models (DO NOT upload GGUF files)
+models/*.gguf
+
+# OS files
+.DS_Store

@@ -1,0 +1,14 @@
+SQL Injection occurs when untrusted input is concatenated into SQL queries.
+Severity: High
+Impact: Attackers can read, modify, or delete database data.
+Remediation: Use parameterized queries or prepared statements.
+
+Cross Site Scripting (XSS) allows attackers to inject malicious scripts.
+Severity: Medium
+Impact: Session hijacking and client-side attacks.
+Remediation: Output encoding and input validation.
+
+Command Injection allows attackers to execute OS commands.
+Severity: Critical
+Impact: Full server compromise.
+Remediation: Avoid shell execution and sanitize inputs.
